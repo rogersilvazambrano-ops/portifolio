@@ -231,6 +231,13 @@ footer span.hi{color:var(--cyan);opacity:0.6}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+/* ── PROJECT CARD AS LINK ── */
+a.pc{display:block;text-decoration:none;color:inherit}
+.pc-thumb{position:relative}
+.pc-shot{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.pc-fallback{display:none;flex-direction:column;align-items:center;justify-content:center;gap:0.9rem;width:100%;height:100%}
+.pc-open{position:absolute;top:8px;right:8px;z-index:2;font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.06em;color:var(--cyan-hi);background:rgba(7,11,20,0.72);border:1px solid rgba(56,189,248,0.32);border-radius:var(--r-sm);padding:0.2rem 0.5rem;opacity:0;transition:opacity .25s}
+a.pc:hover .pc-open{opacity:1}
 /* ── SCROLL REVEAL ── */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);will-change:opacity,transform}
 .reveal.in{opacity:1;transform:none}
@@ -349,22 +356,23 @@ footer span.hi{color:var(--cyan);opacity:0.6}
   <h2 class="s-title reveal">Trabalhos em destaque.</h2>
   <div class="proj-grid">
 
-    <div class="pc reveal">
+    <a class="pc reveal" href="https://prototipodiel.vercel.app/" target="_blank" rel="noopener">
       <div class="pc-thumb">
-        <!-- Imagem: troque este bloco por  <img src="URL_VERCEL" alt="Nome do Projeto"/> -->
-        <div class="pc-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-        <span class="pc-ph">Adicionar imagem</span>
+        <span class="pc-open">Abrir site ↗</span>
+        <img class="pc-shot" src="https://image.thum.io/get/width/1200/crop/750/https://prototipodiel.vercel.app/" alt="DIEL — Balanceamento e Manutenção" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://s.wordpress.com/mshots/v1/https%3A%2F%2Fprototipodiel.vercel.app%2F?w=1200&amp;h=750';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+        <div class="pc-fallback"><div class="pc-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><span class="pc-ph">Ver projeto</span></div>
       </div>
-      <div class="pc-body"><p class="pc-num">01</p><h3 class="pc-title">Nome do Projeto</h3><p class="pc-desc">Descrição breve — o problema resolvido e o resultado entregue ao cliente.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div></div>
-    </div>
+      <div class="pc-body"><p class="pc-num">01</p><h3 class="pc-title">DIEL — Balanceamento e Manutenção</h3><p class="pc-desc">Site institucional para empresa de balanceamento e manutenção industrial — destaque de serviços, frota de motobombas e captação de orçamentos.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div></div>
+    </a>
 
-    <div class="pc reveal">
+    <a class="pc reveal" href="https://advocacia-modelo-six.vercel.app/" target="_blank" rel="noopener">
       <div class="pc-thumb">
-        <div class="pc-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
-        <span class="pc-ph">Adicionar imagem</span>
+        <span class="pc-open">Abrir site ↗</span>
+        <img class="pc-shot" src="https://image.thum.io/get/width/1200/crop/750/https://advocacia-modelo-six.vercel.app/" alt="Nome &amp; Associados Advocacia" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://s.wordpress.com/mshots/v1/https%3A%2F%2Fadvocacia-modelo-six.vercel.app%2F?w=1200&amp;h=750';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">
+        <div class="pc-fallback"><div class="pc-icon"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M6 21V10l6-4 6 4v11M9 21v-5h6v5"/></svg></div><span class="pc-ph">Ver projeto</span></div>
       </div>
-      <div class="pc-body"><p class="pc-num">02</p><h3 class="pc-title">Nome do Projeto</h3><p class="pc-desc">Descrição breve — o problema resolvido e o resultado entregue ao cliente.</p><div class="tags"><span class="tag">WordPress</span><span class="tag">Elementor</span></div></div>
-    </div>
+      <div class="pc-body"><p class="pc-num">02</p><h3 class="pc-title">Nome &amp; Associados Advocacia</h3><p class="pc-desc">Landing page para escritório de advocacia multidisciplinar — áreas de atuação, equipe, depoimentos e agendamento de consulta via WhatsApp.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span></div></div>
+    </a>
 
     <div class="pc reveal">
       <div class="pc-thumb">
